@@ -66,23 +66,10 @@ body {
   align-items: center;
   color: var(--red);
 }
-.logo__mark { width: clamp(78px, 9vw, 116px); height: auto; }
-.logo__name {
-  font-family: var(--sans);
-  font-weight: 500;
-  font-size: clamp(36px, 5vw, 58px);
-  letter-spacing: .14em;
-  line-height: 1;
-  margin-top: 6px;
-  padding-left: .14em;
-}
-.logo__sub {
-  font-family: var(--sans);
-  font-weight: 500;
-  font-size: clamp(11px, 1.3vw, 16px);
-  letter-spacing: .32em;
-  margin-top: 8px;
-  padding-left: .32em;
+.logo__img {
+  display: block;
+  width: clamp(190px, 20vw, 280px);
+  height: auto;
 }
 
 /* ---------- Badge ---------- */
