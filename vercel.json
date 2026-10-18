@@ -1,0 +1,10 @@
+{
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/((?!style\\.css$|script\\.js$|assets/).+)",
+      "destination": "https://azanahotel.com/",
+      "permanent": false
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# Apache / cPanel: semua URL selain https://azanahotel.com/ dialihkan ke sana.
+# Pakai 302 (sementara) supaya browser tidak menyimpan redirect setelah maintenance selesai.
+RewriteEngine On
+DirectoryIndex index.html
+
+# Paksa HTTPS dan domain tanpa www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^azanahotel\.com$ [NC]
+RewriteRule ^ https://azanahotel.com/? [R=302,L]
+
+# File halaman (CSS, JS, logo) tetap boleh diakses
+RewriteRule ^(style\.css|script\.js|assets/.+)$ - [L]
+
+# /index.html yang diketik langsung -> halaman utama
+RewriteCond %{THE_REQUEST} \s/+index\.html [NC]
+RewriteRule ^ https://azanahotel.com/? [R=302,L]
+RewriteRule ^index\.html$ - [L]
+
+# Halaman utama dengan query string (?xxx) -> halaman utama bersih
+RewriteCond %{QUERY_STRING} .
+RewriteRule ^$ https://azanahotel.com/? [R=302,L]
+
+# Path lain apa pun (mis. /home/hotel) -> halaman utama
+RewriteRule ^.+$ https://azanahotel.com/? [R=302,L]
