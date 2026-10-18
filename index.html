@@ -8,23 +8,13 @@
     <meta
       name="description"
       content="Website Azana Hospitality sedang dalam pemeliharaan. Sementara itu, kunjungi Azana Voyage." />
-    <!-- Redirect: selain https://azanahotel.com/ langsung dialihkan ke halaman utama -->
-    <script>
-      (function () {
-        var home = "https://azanahotel.com/";
-        var l = window.location;
-        var isLocal = l.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/.test(l.hostname);
-        if (!isLocal && l.href !== home) l.replace(home);
-      })();
-    </script>
     <meta name="theme-color" content="#8a0f12" />
-    <link rel="canonical" href="https://azanahotel.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Ornamen dekoratif kiri & kanan -->
@@ -75,7 +65,7 @@
       <header class="logo">
         <img
           class="logo__img"
-          src="/assets/logo-azana.png"
+          src="assets/logo-azana.png"
           width="900"
           height="592"
           alt="Azana Hospitality" />
@@ -199,6 +189,6 @@
       </footer>
     </main>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
